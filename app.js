@@ -5,7 +5,7 @@ var app = express();
 app.get('/', function (req, res) {
   const searchIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const ipStackBaseUrl = "http://api.ipstack.com/";
-  const ipStackApiKey = "4ed052760ba165cd398f723a01df2360";
+  const ipStackApiKey = "IP_STACK_API_KEY";
 
   let ipStackUrlRequest = `${ipStackBaseUrl}${searchIp}?access_key=${ipStackApiKey}`;
 
@@ -38,7 +38,7 @@ app.listen(3000, function () {
 // app.get('/', function (req, res) {
 //   const searchIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 //   const ipStackBaseUrl = "http://api.ipstack.com/";
-//   const ipStackApiKey = "4ed052760ba165cd398f723a01df2360";
+//   const ipStackApiKey = "IP_STACK_API_KEY";
 
 //   let ipStackUrlRequest = `${ipStackBaseUrl}${searchIp}?access_key=${ipStackApiKey}`;
 
